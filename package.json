@@ -1,9 +1,9 @@
 {
-  "name": "polar-wave",
+  "name": "demo-polar-wave",
   "version": "0.0.1",
-  "description": "",
+  "description": "Graphic demo of magnetic waves and lines.",
   "main": "index.js",
-  "repository": "",
+  "repository": "git@github.com:bramkok/demo-polar-wave.git",
   "scripts": {
     "start": "node index.js"
   },
