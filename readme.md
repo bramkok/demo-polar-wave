@@ -1,5 +1,4 @@
-polar-wave
-----------
+# polar-wave
 
 Forked from [Hakim El Hattab](http://codepen.io/hakimel/)'s Pen [Strawberry](http://codepen.io/hakimel/pen/aNGqXy/).
 

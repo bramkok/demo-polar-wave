@@ -1,0 +1,10 @@
+{
+  "preset": "airbnb",
+  "fileExtensions": ".js",
+  "validateQuoteMarks": { "mark": "'", "escape": true, "ignoreJSX": true },
+  "excludeFiles": [
+    "node_modules/**",
+    "dist/**"
+  ],
+  "esnext": true
+}

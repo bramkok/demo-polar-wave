@@ -1,49 +1,44 @@
-var SIZE = Math.min(window.innerWidth / 10, 26);
-var LENGTH = SIZE * 1.8;
-var THICKNESS = 4.5;
+const size = Math.min(window.innerWidth / 10, 26);
+const length = size * 1.0;
+const thickness = 4.0;
 
-var canvas = document.querySelector('canvas');
-var context = canvas.getContext('2d');
+const canvas = document.querySelector('canvas');
+const context = canvas.getContext('2d');
 
-var width = canvas.width = window.innerWidth,
-  height = canvas.height = window.innerHeight,
-  margin = Math.min(window.innerWidth, window.innerHeight) * 0.33;
+const width = canvas.width = window.innerWidth;
+const height = canvas.height = window.innerHeight;
+const margin = Math.min(window.innerWidth, window.innerHeight) * 0.33;
 
-var step = 0;
+let step = 0;
 
-boom();
-
-function boom() {
+function update() {
+  requestAnimationFrame(update);
 
   step += 2.8;
 
   context.clearRect(0, 0, width, height);
-  context.fillStyle = '#EF2929';
+  context.fillStyle = '#5f819d';
 
-  var cols = Math.floor((width - margin * 2) / SIZE),
-    rows = Math.floor((height - margin * 2) / SIZE);
+  const cols = Math.floor((width - margin * 2) / size);
+  const rows = Math.floor((height - margin * 2) / size);
 
-  var ox = (width - (cols * SIZE)) / 2,
-    oy = (height - (rows * SIZE)) / 2.2;
+  const ox = (width - (cols * size)) / 2;
+  const oy = (height - (rows * size)) / 2.2;
 
-  for (var x = 0; x < cols; x++) {
-    for (var y = 0; y < rows; y++) {
-
-      var px = ox + x * SIZE,
-        py = oy + y * SIZE;
-
-      var a = ((x + y) / 10) + (step / 75);
+  for (let x = 0; x < cols; x++) {
+    for (let y = 0; y < rows; y++) {
+      const px = ox + x * size;
+      const py = oy + y * size;
+      const a = ((x + y) / 10) + (step / 75);
 
       context.save();
-      context.translate(px + SIZE / 2, py + SIZE / 2);
+      context.translate(px + size / 2, py + size / 2);
       context.rotate(a + Math.sin(a) - Math.PI / 2);
       context.translate(0, 10);
-      context.fillRect(0, -THICKNESS / 2, LENGTH, THICKNESS / 2);
+      context.fillRect(0, - thickness / 2, length, thickness / 2);
       context.restore();
-
     }
   }
-
-  requestAnimationFrame(boom);
-
 }
+
+requestAnimationFrame(update);

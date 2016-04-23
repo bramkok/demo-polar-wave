@@ -1,0 +1,26 @@
+{
+  "name": "polar-wave",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "repository": "",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": {
+    "name": "Bram Kok",
+    "url": "https://bramkok.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.12.3",
+    "eslint": "^2.4.0",
+    "eslint-config-airbnb": "^6.2.0",
+    "eslint-plugin-react": "^4.2.3",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.0"
+  },
+  "dependencies": {
+    "node-static": "^0.7.7"
+  }
+}
